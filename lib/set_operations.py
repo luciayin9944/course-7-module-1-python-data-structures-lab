@@ -1,4 +1,5 @@
 # This module contains operations related to sets.
+from lib.student_data import students
 
 def unique_majors(student_list):
     """
@@ -6,4 +7,20 @@ def unique_majors(student_list):
     Extract the major field from each student record.
     """
     # TODO: Implement this function
-    pass
+    ##set comprehension
+    return {student[2] for student in student_list}
+
+# print(unique_majors(students))
+
+
+
+    # majors = set()
+    # for student in student_list:
+    #     majors.add(student[2])
+    # #print(majors)
+    # return majors
+
+# majors = unique_majors(students)
+# print(majors)
+        
+

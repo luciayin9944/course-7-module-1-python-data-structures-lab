@@ -1,5 +1,5 @@
 # This module contains operations related to sets.
-from student_data import students
+from lib.student_data import students
 
 def unique_majors(student_list):
     """
@@ -10,7 +10,7 @@ def unique_majors(student_list):
     ##set comprehension
     return {student[2] for student in student_list}
 
-print(unique_majors(students))
+# print(unique_majors(students))
 
 
 

@@ -1,5 +1,5 @@
-from student_data import students
-from data_processing import display_students
+from lib.student_data import students
+from lib.data_processing import display_students
 # This module contains functions for filtering student data.
 
 def filter_students_by_major(student_list, major):
@@ -10,6 +10,7 @@ def filter_students_by_major(student_list, major):
     - Return a new list containing only students that match.
     """
     # TODO: Implement this function
+    #list comprehension
     filtered_student = [student for student in student_list if student[2]==major]
     if filtered_student:
         print(f"\nStudents majoring in {major}")
@@ -17,4 +18,6 @@ def filter_students_by_major(student_list, major):
     else:
         print(f"\nNo student majoring in {major}")
 
-filter_students_by_major(students, "Physics")
+    return filtered_student
+
+#filter_students_by_major(students, "Computer Science")
